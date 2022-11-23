@@ -4,7 +4,7 @@ using Cycle.Game.Scripting;
 using Cycle.Game.Services;
 
 
-namespace Cycle
+namespace Cycle 
 {
     /// <summary>
     /// The program's entry point.
@@ -18,12 +18,12 @@ namespace Cycle
         static void Main(string[] args)
         {
             Point start = new Point(Constants.MAX_X / 2, Constants.MAX_Y / 2);
-            Color color = Constants.GREEN;
+            Color color1 = Constants.GREEN;
 
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake(start, color));
+            cast.AddActor("snake", new Snake(start, color1));
             cast.AddActor("score", new Score());
 
             // create the services

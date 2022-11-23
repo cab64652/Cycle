@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace Unit05.Game.Casting
+namespace Cycle.Game.Casting
 {
     /// <summary>
     /// <para>A color.</para>
