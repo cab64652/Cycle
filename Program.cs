@@ -17,13 +17,17 @@ namespace Cycle
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
-            Point start = new Point(Constants.MAX_X / 2, Constants.MAX_Y / 2);
+            Point start1 = new Point(Constants.MAX_X / 2, Constants.MAX_Y / 2);
             Color color1 = Constants.GREEN;
+
+            Point start2 = new Point(Constants.MAX_X / 3, Constants.MAX_Y / 3);
+            Color color2 = Constants.RED;
 
             // create the cast
             Cast cast = new Cast();
+            cast.AddActor("snake1", new Snake(start1, color1));
+            cast.AddActor("snake2", new Snake(start2, color2));
             cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake(start, color1));
             cast.AddActor("score", new Score());
 
             // create the services
