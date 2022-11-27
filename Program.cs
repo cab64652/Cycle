@@ -25,10 +25,10 @@ namespace Cycle
 
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("snake1", new Snake(start1, color1));
-            cast.AddActor("snake2", new Snake(start2, color2));
-            cast.AddActor("food", new Food());
-            cast.AddActor("score", new Score());
+            cast.AddActor("cycle1", new Cycle(start1, color1));
+            cast.AddActor("cycle2", new Cycle(start2, color2));
+            // cast.AddActor("food", new Food());
+            // cast.AddActor("score", new Score());
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

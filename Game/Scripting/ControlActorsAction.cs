@@ -77,11 +77,11 @@ namespace Cycle.Game.Scripting
             }
 
 
-            Snake snake1 = (Snake)cast.GetFirstActor("snake1");
-            snake1.TurnHead(_direction1);
+            Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
+            cycle1.TurnHead(_direction1);
 
-            Snake snake2 = (Snake)cast.GetFirstActor("snake2");
-            snake2.TurnHead(_direction2);
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+            cycle2.TurnHead(_direction2);
 
         }
     }

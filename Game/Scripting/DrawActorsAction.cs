@@ -24,19 +24,19 @@ namespace Cycle.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            Snake snake1 = (Snake)cast.GetFirstActor("snake1");
-            List<Actor> segments1 = snake1.GetSegments();
-            Snake snake2 = (Snake)cast.GetFirstActor("snake2");
-            List<Actor> segments2 = snake2.GetSegments();
-            Actor score = cast.GetFirstActor("score");
-            Actor food = cast.GetFirstActor("food");
+            Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
+            List<Actor> segments1 = cycle1.GetSegments();
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+            List<Actor> segments2 = cycle2.GetSegments();
+            // Actor score = cast.GetFirstActor("score");
+            // Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             _videoService.ClearBuffer();
             _videoService.DrawActors(segments1);
             _videoService.DrawActors(segments2);
-            _videoService.DrawActor(score);
-            _videoService.DrawActor(food);
+            // _videoService.DrawActor(score);
+            // _videoService.DrawActor(food);
             _videoService.DrawActors(messages);
             _videoService.FlushBuffer();
         }
