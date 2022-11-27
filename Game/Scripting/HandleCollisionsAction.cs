@@ -10,8 +10,7 @@ namespace CycleGame.Game.Scripting
     /// <summary>
     /// <para>An update action that handles interactions between the actors.</para>
     /// <para>
-    /// The responsibility of HandleCollisionsAction is to handle the situation when the cycle1 
-    /// collides with the food, or the cycle1 collides with its segments, or the game is over.
+    /// The responsibility of HandleCollisionsAction is to handle the situation when the cycle1.
     /// </para>
     /// </summary>
     public class HandleCollisionsAction : Action
@@ -32,30 +31,10 @@ namespace CycleGame.Game.Scripting
         {
             if (_isGameOver == false)
             {
-                // HandleFoodCollisions(cast);
                 HandleSegmentCollisions(cast);
                 HandleGameOver(cast);
             }
         }
-
-        // /// <summary>
-        // /// Updates the score nd moves the food if the cycle1 collides with it.
-        // /// </summary>
-        // /// <param name="cast">The cast of actors.</param>
-        // private void HandleFoodCollisions(Cast cast)
-        // {
-        //     Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
-        //     Score score = (Score)cast.GetFirstActor("score");
-        //     Food food = (Food)cast.GetFirstActor("food");
-            
-        //     if (cycle1.GetHead().GetPosition().Equals(food.GetPosition()))
-        //     {
-        //         int points = food.GetPoints();
-        //         cycle1.GrowTail(points);
-        //         score.AddPoints(points);
-        //         food.Reset();
-        //     }
-        // }
 
         /// <summary>
         /// Sets the game over flag if the cycle1 collides with one of its segments.
@@ -119,9 +98,6 @@ namespace CycleGame.Game.Scripting
                 Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
                 List<Actor> segments2 = cycle2.GetSegments();
 
-                // Food food = (Food)cast.GetFirstActor("food");
-
-                // create a "game over" message
                 int x = Constants.MAX_X / 2;
                 int y = Constants.MAX_Y / 2;
                 Point position = new Point(x, y);
@@ -147,16 +123,12 @@ namespace CycleGame.Game.Scripting
                     message.SetPosition(position);
                     cast.AddActor("messages", message);
 
-                    // make everything white
                     foreach (Actor segment in segments1)
                     {
                         segment.SetColor(Constants.WHITE);
                     }
                 }
-
-                // food.SetColor(Constants.WHITE);
             }
         }
-
     }
 }

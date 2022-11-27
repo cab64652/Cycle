@@ -6,9 +6,6 @@ namespace CycleGame
 {
     /// <summary>
     /// <para>A tasty item that cycles like to eat.</para>
-    /// <para>
-    /// The responsibility of Food is to select a random position and points that it's worth.
-    /// </para>
     /// </summary>
     public class Constants
     {

@@ -28,15 +28,11 @@ namespace CycleGame.Game.Scripting
             List<Actor> segments1 = cycle1.GetSegments();
             Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
             List<Actor> segments2 = cycle2.GetSegments();
-            // Actor score = cast.GetFirstActor("score");
-            // Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             _videoService.ClearBuffer();
             _videoService.DrawActors(segments1);
             _videoService.DrawActors(segments2);
-            // _videoService.DrawActor(score);
-            // _videoService.DrawActor(food);
             _videoService.DrawActors(messages);
             _videoService.FlushBuffer();
         }

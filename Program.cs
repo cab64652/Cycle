@@ -27,8 +27,6 @@ namespace CycleGame
             Cast cast = new Cast();
             cast.AddActor("cycle1", new Cycle(start1, color1));
             cast.AddActor("cycle2", new Cycle(start2, color2));
-            // cast.AddActor("food", new Food());
-            // cast.AddActor("score", new Score());
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
