@@ -66,10 +66,12 @@ namespace CycleGame.Game.Scripting
             Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
             Actor head1 = cycle1.GetHead();
             List<Actor> body1 = cycle1.GetBody();
+            cycle1.GrowTail(1, Constants.GREEN);
 
             Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
             Actor head2 = cycle2.GetHead();
             List<Actor> body2 = cycle2.GetBody();
+            cycle2.GrowTail(1, Constants.RED);
 
             foreach (Actor segment in body1)
             {
