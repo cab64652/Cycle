@@ -17,6 +17,8 @@ namespace CycleGame.Game.Scripting
     public class HandleCollisionsAction : Action
     {
         private bool _isGameOver = false;
+        private bool _isWinner1 = false;
+        private bool _isWinner2 = false;
 
         /// <summary>
         /// Constructs a new instance of HandleCollisionsAction.
@@ -62,14 +64,46 @@ namespace CycleGame.Game.Scripting
         private void HandleSegmentCollisions(Cast cast)
         {
             Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
-            Actor head = cycle1.GetHead();
-            List<Actor> body = cycle1.GetBody();
+            Actor head1 = cycle1.GetHead();
+            List<Actor> body1 = cycle1.GetBody();
 
-            foreach (Actor segment in body)
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+            Actor head2 = cycle2.GetHead();
+            List<Actor> body2 = cycle2.GetBody();
+
+            foreach (Actor segment in body1)
             {
-                if (segment.GetPosition().Equals(head.GetPosition()))
+                if (segment.GetPosition().Equals(head1.GetPosition()))
                 {
                     _isGameOver = true;
+                    _isWinner2 = true;
+                }
+            }
+
+            foreach (Actor segment in body1)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    _isGameOver = true;
+                    _isWinner1 = true;
+                }
+            }
+
+            foreach (Actor segment in body2)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    _isGameOver = true;
+                    _isWinner1 = true;
+                }
+            }
+
+              foreach (Actor segment in body2)
+            {
+                if (segment.GetPosition().Equals(head1.GetPosition()))
+                {
+                    _isGameOver = true;
+                    _isWinner2 = true;
                 }
             }
         }
@@ -79,7 +113,10 @@ namespace CycleGame.Game.Scripting
             if (_isGameOver == true)
             {
                 Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
-                List<Actor> segments = cycle1.GetSegments();
+                List<Actor> segments1 = cycle1.GetSegments();
+                Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+                List<Actor> segments2 = cycle2.GetSegments();
+
                 // Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
@@ -87,16 +124,34 @@ namespace CycleGame.Game.Scripting
                 int y = Constants.MAX_Y / 2;
                 Point position = new Point(x, y);
 
-                Actor message = new Actor();
-                message.SetText("Game Over!");
-                message.SetPosition(position);
-                cast.AddActor("messages", message);
-
-                // make everything white
-                foreach (Actor segment in segments)
+                if (_isWinner1 == true)
                 {
-                    segment.SetColor(Constants.WHITE);
+                    Actor message = new Actor();
+                    message.SetText("Game Over!\n Green Wins!");
+                    message.SetPosition(position);
+                    cast.AddActor("messages", message);
+
+                    foreach (Actor segment in segments2)
+                    {
+                        segment.SetColor(Constants.WHITE);
+                    }
+
                 }
+
+                else if (_isWinner2 == true)
+                {
+                    Actor message = new Actor();
+                    message.SetText("Game Over!\n Red Wins!");
+                    message.SetPosition(position);
+                    cast.AddActor("messages", message);
+
+                    // make everything white
+                    foreach (Actor segment in segments1)
+                    {
+                        segment.SetColor(Constants.WHITE);
+                    }
+                }
+
                 // food.SetColor(Constants.WHITE);
             }
         }

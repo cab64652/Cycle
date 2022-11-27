@@ -54,7 +54,7 @@ namespace CycleGame.Game.Casting
         /// Grows the cycle's tail by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
-        public void GrowTail(int numberOfSegments)
+        public void GrowTail(int numberOfSegments, Color color)
         {
             for (int i = 0; i < numberOfSegments; i++)
             {
@@ -67,7 +67,7 @@ namespace CycleGame.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("#");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(color);
                 _segments.Add(segment);
             }
         }

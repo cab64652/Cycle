@@ -20,7 +20,7 @@ namespace CycleGame
             Point start1 = new Point(Constants.MAX_X / 2, Constants.MAX_Y / 2);
             Color color1 = Constants.GREEN;
 
-            Point start2 = new Point(Constants.MAX_X / 3, Constants.MAX_Y / 3);
+            Point start2 = new Point(Constants.MAX_X / 4, Constants.MAX_Y / 4);
             Color color2 = Constants.RED;
 
             // create the cast
