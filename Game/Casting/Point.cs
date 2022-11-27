@@ -1,4 +1,4 @@
-namespace Cycle.Game.Casting
+namespace CycleGame.Game.Casting
 {
     /// <summary>
     /// <para>A distance from a relative origin (0, 0).</para>

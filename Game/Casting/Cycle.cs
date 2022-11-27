@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Cycle.Game.Casting
+namespace CycleGame.Game.Casting
 {
     /// <summary>
     /// <para>A long limbless reptile.</para>

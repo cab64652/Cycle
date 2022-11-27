@@ -1,7 +1,7 @@
-using Cycle.Game.Casting;
+using CycleGame.Game.Casting;
 
 
-namespace Cycle.Game.Scripting 
+namespace CycleGame.Game.Scripting 
 {
     /// <summary>
     /// <para>A thing that is done.</para>

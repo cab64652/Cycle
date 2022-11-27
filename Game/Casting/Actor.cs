@@ -1,7 +1,7 @@
 using System;
 
 
-namespace Cycle.Game.Casting
+namespace CycleGame.Game.Casting
 {
     /// <summary>
     /// <para>A thing that participates in the game.</para>

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Reflection.Metadata;
 using Raylib_cs;
-using Cycle.Game.Casting;
+using CycleGame.Game.Casting;
 
 
-namespace Cycle.Game.Services
+namespace CycleGame.Game.Services
 {
     /// <summary>
     /// <para>Outputs the game state.</para>

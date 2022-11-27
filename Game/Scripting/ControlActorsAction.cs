@@ -1,8 +1,8 @@
-using Cycle.Game.Casting;
-using Cycle.Game.Services;
+using CycleGame.Game.Casting;
+using CycleGame.Game.Services;
 
 
-namespace Cycle.Game.Scripting
+namespace CycleGame.Game.Scripting
 {
     /// <summary>
     /// <para>An input action that controls the snake.</para>

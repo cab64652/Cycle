@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Cycle.Game.Casting;
-using Cycle.Game.Services;
+using CycleGame.Game.Casting;
+using CycleGame.Game.Services;
 
 
-namespace Cycle.Game.Scripting
+namespace CycleGame.Game.Scripting
 {
     /// <summary>
     /// <para>An output action that draws all the actors.</para>

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Raylib_cs;
-using Cycle.Game.Casting;
+using CycleGame.Game.Casting;
 
 
-namespace Cycle.Game.Services
+namespace CycleGame.Game.Services
 {
     /// <summary>
     /// <para>Detects player input.</para>

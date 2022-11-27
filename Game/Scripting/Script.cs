@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace Cycle.Game.Scripting
+namespace CycleGame.Game.Scripting
 {
     /// <summary>
     /// <para>A collection of actions.</para>

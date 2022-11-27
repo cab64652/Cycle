@@ -1,10 +1,10 @@
-﻿using Cycle.Game.Casting;
-using Cycle.Game.Directing;
-using Cycle.Game.Scripting;
-using Cycle.Game.Services;
+﻿using CycleGame.Game.Casting;
+using CycleGame.Game.Directing;
+using CycleGame.Game.Scripting;
+using CycleGame.Game.Services;
 
 
-namespace Cycle 
+namespace CycleGame 
 {
     /// <summary>
     /// The program's entry point.

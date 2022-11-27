@@ -1,8 +1,8 @@
 using System;
 using Microsoft.VisualBasic;
-using Cycle.Game.Casting;
+using CycleGame.Game.Casting;
 
-namespace Cycle
+namespace CycleGame
 {
     /// <summary>
     /// <para>A tasty item that cycles like to eat.</para>

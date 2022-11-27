@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace Cycle.Game.Casting
+namespace CycleGame.Game.Casting
 {
     /// <summary>
     /// <para>A collection of actors.</para>
